@@ -3,7 +3,7 @@
 Prevent Pwned Passwords is designed to help keep you safe while browsing the web by ensuring you don't use a password that is 
 known to have been part of a data breach.
 
-Accordingly, we're very careful with any credentials you provide. Whenever we check to see if a password has been involved in
+Accordingly, we're very careful with your data. Whenever we check to see if a password has been involved in
 a past breach, we take the following measures:
 * The password is hashed before we begin working with it at all. No password is ever sent in plain text.
 * The hash is sent securely over HTTPS to Have I Been Pwned, the service which checks for breaches.
