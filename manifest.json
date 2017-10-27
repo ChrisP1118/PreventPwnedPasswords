@@ -1,7 +1,8 @@
 {
 	"manifest_version": 2,
 	"name": "Prevent Pwned Passwords",
-	"description": "Checks any password entered against Have I Been Pwned and displays a notification if the password has been leaked in a breach.",
+	"short_name": "PreventPwned",
+	"description": "Checks password hashes against Have I Been Pwned and displays a notification if the hash has been leaked in a breach.",
 	"version": "1.0.0",
 
 	"icons": {
@@ -11,11 +12,16 @@
 	},
 
 	"permissions": [
-		"notifications"
+		"notifications",
+		"storage",
+		"contextMenus"
 	],
 
 	"background": {
-		"scripts": ["background.js"],
+		"scripts": [
+			"background.js",
+			"sha1.js"
+		],
 		"persistent": true
 	},
 	
