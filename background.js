@@ -113,7 +113,7 @@ function checkHash(hashedPassword, hostname, ignoreCache) {
 				message: 'You just used a password on ' + hostname + ' that\'s been present in a data breach. You should consider that password insecure and change it.',
 				buttons: [
 					{title: 'Learn More'},
-					{title: 'Whitelist ' + hostname}
+					{title: 'Whitelist ' + hostname + ' (Don\'t verify passwords anymore)'}
 				],
 				priority: 0});
 				

@@ -3,7 +3,7 @@
 	"name": "Prevent Pwned Passwords",
 	"short_name": "PreventPwned",
 	"description": "Checks password hashes against Have I Been Pwned and displays a notification if the hash has been leaked in a breach.",
-	"version": "1.0.0",
+	"version": "1.1.0",
 
 	"icons": {
 		"16": "ppp_16.png",
