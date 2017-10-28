@@ -24,4 +24,4 @@ No. What it means is that the password you used has been leaked in some prior da
 
 ## How do you keep my password safe?
 
-Our privacy policy explains this in more depth.
+Our [privacy policy](privacy-policy.md) explains this in more depth. The goal of Prevent Pwned Passwords is to make you more secure, so we are very careful with your data.
