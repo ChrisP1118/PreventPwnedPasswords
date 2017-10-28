@@ -2,7 +2,7 @@ var testedPasswords = [];
 var whitelistedHostnames = null;
 var mode = 'All';
 var contextMenuPassword = null;
-var learnMoreUrl = 'http://www.xaipete.net/2017/10/24/prevent-pwned-passwords/';
+var learnMoreUrl = 'https://chrisp1118.github.io/PreventPwnedPasswords/';
 
 function setMode(newMode) {
 	if (mode == newMode)
