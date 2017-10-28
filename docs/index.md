@@ -14,9 +14,13 @@ While some people might like these constant reminders of bad passwords, you migh
 * "Verify password fields when creating an account" will only verify passwords on page that look like they are for creating an account (or resetting a password). We can't always correctly determine these pages, but we look for pages that have two password fields (a password and a confirm field).
 * "Verify password fields when I ask" doesn't automatically check any passwords. But you can right-click on any password field and choose "Has this password been pwned" from the menu to explicitly choose to verify a password. (This option is also available even if you also have password fields verified automatically.)
 
-## What exactly does this do?
+## What should I do if I get a notification that my password has been in a breach?
 
+You should change that password to something more secure.
 
+## If my password has been in a breach, does this mean that I've been hacked?
+
+No. What it means is that the password you used has been leaked in some prior data breach. It doesn't necessarily mean that your account was involved in a breach -- someone else could have used the same password as you. But because that password was leaked at some point by some site, it's much more likely to be compromised now -- so much so that you simply shouldn't use that password anymore.
 
 ## How do you keep my password safe?
 
