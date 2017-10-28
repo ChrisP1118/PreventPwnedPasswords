@@ -14,6 +14,8 @@ While some people might like these constant reminders of bad passwords, you migh
 * "Verify password fields when creating an account" will only verify passwords on page that look like they are for creating an account (or resetting a password). We can't always correctly determine these pages, but we look for pages that have two password fields (a password and a confirm field).
 * "Verify password fields when I ask" doesn't automatically check any passwords. But you can right-click on any password field and choose "Has this password been pwned" from the menu to explicitly choose to verify a password. (This option is also available even if you also have password fields verified automatically.)
 
+Additionally, whenever a notification appears, you can choose to whitelist the domain. By whitelisting it, we'll no longer check any passwords you enter on that domain.
+
 ## What should I do if I get a notification that my password has been in a breach?
 
 You should change that password to something more secure.
