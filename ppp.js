@@ -1,3 +1,5 @@
+var keyupTimeout = null;
+
 function checkPassword(passwordField) {
 	var password = passwordField.value;
 	
@@ -23,12 +25,19 @@ function clearNotification() {
 var passwordFields = document.querySelectorAll('input[type="password"]');
 for (var i = 0; i < passwordFields.length; ++i) {
 	passwordFields[i].addEventListener('keyup', function (e) {
+		var passwordField = this;
+		clearTimeout(keyupTimeout);
 		if (e.keyCode == 13)
-			checkPassword(this);
-		else
+			checkPassword(passwordField);
+		else {
+			keyupTimeout = setTimeout(function () {
+				checkPassword(passwordField);
+			}, 1500);
 			clearNotification();
+		}
 	});
 	passwordFields[i].addEventListener('blur', function (e) {
+		clearTimeout(keyupTimeout);
 		checkPassword(this);
 	});
 }

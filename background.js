@@ -53,8 +53,11 @@ function initContextMenus() {
 		title: 'Clear whitelist',
 		contexts: ['page_action'],
 		onclick: function () {
-			if (confirm('Are you sure you want to clear the whitelist?'))
-				chrome.storage.sync.clear();
+			if (confirm('Are you sure you want to clear the whitelist?')) {
+				whitelistedHostnames = [];
+				testedPasswords = [];
+				chrome.storage.sync.set({'whitelist': whitelistedHostnames});
+			}
 		}
 	});
 
@@ -110,10 +113,10 @@ function checkHash(hashedPassword, hostname, ignoreCache) {
 				type: 'basic',
 				iconUrl: 'warning_48.png',
 				title: 'Oh no! Pwned password!',
-				message: 'You just used a password on ' + hostname + ' that\'s been present in a data breach. You should consider that password insecure and change it.',
+				message: 'You just used a password on ' + hostname + ' that\'s been in a data breach. You should consider that password insecure and change it.',
 				buttons: [
 					{title: 'Learn More'},
-					{title: 'Whitelist ' + hostname + ' (Don\'t verify passwords anymore)'}
+					{title: 'Whitelist ' + hostname + ' (Ignore passwords here)'}
 				],
 				priority: 0});
 				
@@ -122,8 +125,8 @@ function checkHash(hashedPassword, hostname, ignoreCache) {
 				chrome.notifications.create(notificationId, {
 					type: 'basic',
 					iconUrl: 'success_48.png',
-					title: 'Hooray! Safe password!',
-					message: 'You just used a password on ' + hostname + ' that\'s is not known to have been present in a data breach.',
+					title: 'Hooray! Good password!',
+					message: 'You just used a password on ' + hostname + ' that\'s not known to have been in any data breach.',
 					priority: 0});
 			}
 		}
