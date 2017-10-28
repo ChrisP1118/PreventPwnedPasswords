@@ -22,6 +22,12 @@ You should change that password to something more secure.
 
 No. What it means is that the password you used has been leaked in some prior data breach. It doesn't necessarily mean that your account was involved in a breach -- someone else could have used the same password as you. But because that password was leaked at some point by some site, it's much more likely to be compromised now -- so much so that you simply shouldn't use that password anymore.
 
+## Wait, so my password could be compromised even if it was someone else's account (who had the same password as me) was hacked?
+
+Yes. A common method that malicious hackers use is called a "brute force" attack. They use an automated process to try every possible combination of characters as a password. Imagine trying to guess passwords for a user -- you could start with "aaaaaa", then try "aaaaab", then "aaaaac", and so on until you guessed the right one. This is the basic idea behind a brute force attack.
+
+To make a brute force attack more efficient, hackers will often begin by using a dictionary of known passwords -- the same list of passwords that we verify against. So any password that has been compromised (even if it was breached from someone else's account) is much more likely to be guessed by a brute force attack.
+
 ## How do you keep my password safe?
 
 Our [privacy policy](privacy-policy.md) explains this in more depth. The goal of Prevent Pwned Passwords is to make you more secure, so we are very careful with your data.
