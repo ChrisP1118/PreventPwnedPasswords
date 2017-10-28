@@ -37,3 +37,7 @@ Our [privacy policy](privacy-policy.md) explains this in more depth. The goal of
 ## What is "Have I Been Pwned"? Why do they have a list of compromised passwords?
 
 [Have I Been Pwned](https://haveibeenpwned.com) is a service that monitors data breaches to help people know when an account of theirs may have been compromised or hacked. They do not store passwords, and are very carefully about how the data they collect is managed and secured. You can read more about that on their [About page](https://haveibeenpwned.com/About).
+
+## Who created this app and why?
+
+It was created by [Chris Wilson](https://www.xaipete.net) to help people stay a bit safer online.
