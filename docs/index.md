@@ -6,7 +6,8 @@ Prevent Pwned Passwords is a Chrome extension that helps make sure you don't use
 
 To get started, install the Prevent Pwned Passwords from the Chrome Web Store.
 
-Once installed, whenever you enter a password on any page, that password will automatically be verified against Have I Been Pwned, a service that keeps track of passwords that are known to have been compromised. If the password you enter has been in a prior breach, a notification will appear on screen.
+Once installed, whenever you enter a password on any page, that password will automatically be verified against Have I Been Pwned, a service that keeps track of passwords that are known to have been compromised. If the password you enter has been in a prior breach, a notification will appear on screen. The notifications look like this:
+![Notification Example](AlertExample.png)
 
 While some people might like these constant reminders of bad passwords, you might find it a bit too naggy. There are a few options to better manage these notifications, which you can find by clicking on the Prevent Pwned Passwords icon:
 
