@@ -1,13 +1,15 @@
 function checkPassword(passwordField) {
 	var password = passwordField.value;
 	
+	var form = passwordField.form;
+	var passwords = form.querySelectorAll('input[type="password"]');
+	
 	chrome.runtime.sendMessage({
 		'action': 'checkPassword',
 		'password': password,
-		'hostname': location.hostname
-	}, function(response) {
-		//console.log(response);
-		//console.log(response.passwordResponse);
+		'hostname': location.hostname,
+		'ignoreCache': false,
+		'isCreateAccount': passwords.length >= 2
 	});	
 }
 
@@ -31,3 +33,15 @@ for (var i = 0; i < passwordFields.length; ++i) {
 	});
 }
 
+var clickedElement = null;
+
+document.addEventListener('mousedown', function (e) {
+    if (e.button == 2) {
+		chrome.runtime.sendMessage({
+			'action': 'setContextMenuPassword',
+			'hostname': location.hostname,
+			'password': event.target.value,
+			'ignoreCache': true
+		});
+	}
+}, true);
