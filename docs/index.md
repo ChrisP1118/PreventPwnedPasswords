@@ -1,14 +1,10 @@
----
-title:      "Prevent Pwned Passwords"
-subtitle:   "A Chrome extension to help you avoid compromised passwords"
----
-
 # Prevent Pwned Passwords
 
-Prevent Pwned Passwords is a Chrome extension that helps make sure you don't use any password that's known to have been part of a data breach.
+Prevent Pwned Passwords is a Chrome and Firefox extension that helps make sure you don't use any password that's known to have been part of a data breach.
 
 Get it here:
 * [Chrome Web Store](https://chrome.google.com/webstore/detail/prevent-pwned-passwords/paejfbiaafjadancnngnnhddeahmncba?hl=en-US&gl=US)
+* [Firefox Add-On](https://addons.mozilla.org/en-US/firefox/addon/prevent-pwned-passwords/)
 
 ## How does it work?
 
@@ -18,7 +14,7 @@ The notifications look like this:
 
 ![Example Notification](AlertExample.png)
 
-While some people might like these constant reminders of bad passwords, you might find it a bit too naggy. There are a few options to better manage these notifications, which you can find by clicking on the Prevent Pwned Passwords icon:
+While some people might like these constant reminders of bad passwords, you might find it a bit too naggy. There are a few options to better manage these notifications, which you can find by clicking on the Prevent Pwned Passwords icon (right-clicking on it in Firefox):
 
 <img align="right" src="OptionsMenu.png" alt="Options Menu">
 
@@ -26,7 +22,7 @@ While some people might like these constant reminders of bad passwords, you migh
 * **Verify password fields when creating an account** will only verify passwords on page that look like they are for creating an account (or resetting a password). We can't always correctly determine these pages, but we look for pages that have two password fields (a password and a confirm field).
 * **Verify password fields when I ask** doesn't automatically check any passwords. But you can right-click on any password field and choose "Has this password been pwned" from the menu to explicitly choose to verify a password. (This option is also available even if you also have password fields verified automatically.)
 
-Additionally, whenever a notification appears, you can choose to whitelist the domain. By whitelisting it, we'll no longer check any passwords you enter on that domain.
+Additionally, whenever a notification appears, you can choose to whitelist the domain. (In Firefox, you can whitelist a domain through the menu instead of the notification.) By whitelisting it, we'll no longer check any passwords you enter on that domain.
 
 ## What should I do if I get a notification that my password has been in a breach?
 
