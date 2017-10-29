@@ -3,6 +3,7 @@ var whitelistedHostnames = null;
 var mode = 'All';
 var contextMenuPassword = null;
 var learnMoreUrl = 'https://chrisp1118.github.io/PreventPwnedPasswords/';
+var lastHostname = null;
 
 function setMode(newMode) {
 	if (mode == newMode)
@@ -97,18 +98,8 @@ function checkHash(hashedPassword, hostname, ignoreCache) {
 	}).then(function(response) {
 		if (response.status == 200) {
 		
-			chrome.notifications.onButtonClicked.addListener(function (notificationId, buttonIndex) {
-				if (notificationId == notificationId && buttonIndex == 0) {
-					chrome.tabs.create({ url: learnMoreUrl });
-				} else if (notificationId == notificationId && buttonIndex == 1) {
-					if (!whitelistedHostnames.includes(hostname)) {
-						whitelistedHostnames.push(hostname);
-						chrome.storage.sync.set({'whitelist': whitelistedHostnames});
-						chrome.notifications.clear(notificationId);
-					}
-				}
-			});
-			
+			lastHostname = hostname;
+		
 			chrome.notifications.create(notificationId, {
 				type: 'basic',
 				iconUrl: 'warning_48.png',
@@ -177,3 +168,16 @@ chrome.storage.sync.get('mode', function (results) {
 	
 	initContextMenus();
 });
+
+chrome.notifications.onButtonClicked.addListener(function (notificationId, buttonIndex) {
+	if (notificationId == notificationId && buttonIndex == 0) {
+		chrome.tabs.create({ url: learnMoreUrl });
+	} else if (notificationId == notificationId && buttonIndex == 1) {
+		if (!whitelistedHostnames.includes(lastHostname)) {
+			whitelistedHostnames.push(lastHostname);
+			chrome.storage.sync.set({'whitelist': whitelistedHostnames});
+			chrome.notifications.clear(notificationId);
+		}
+	}
+});
+

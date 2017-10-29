@@ -3,8 +3,14 @@
 	"name": "Prevent Pwned Passwords",
 	"short_name": "PreventPwned",
 	"description": "Checks password hashes against Have I Been Pwned and displays a notification if the hash has been leaked in a breach.",
-	"version": "1.1.0",
+	"version": "1.0.0",
 
+	"applications": {
+		"gecko": {
+			"id": "4D9C893EBC2611E7AB4AC51441933DDE@xaipete.net"
+		}
+	},
+	
 	"icons": {
 		"16": "ppp_16.png",
 		"48": "ppp_48.png",
@@ -14,15 +20,20 @@
 	"permissions": [
 		"notifications",
 		"storage",
-		"contextMenus"
+		"contextMenus",
+		"tabs"
 	],
+
+	"browser_action": {
+		"default_icon": "ppp_48.png",
+		"default_title": "Prevent Pwned Passwords"
+	},
 
 	"background": {
 		"scripts": [
 			"background.js",
 			"sha1.js"
-		],
-		"persistent": true
+		]
 	},
 	
 	"content_scripts": [

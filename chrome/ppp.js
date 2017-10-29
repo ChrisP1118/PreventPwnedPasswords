@@ -49,7 +49,7 @@ document.addEventListener('mousedown', function (e) {
 		chrome.runtime.sendMessage({
 			'action': 'setContextMenuPassword',
 			'hostname': location.hostname,
-			'password': event.target.value,
+			'password': e.target.value,
 			'ignoreCache': true
 		});
 	}
