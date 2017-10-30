@@ -48,4 +48,4 @@ Our [privacy policy](privacy-policy.md) explains this in more depth. The goal of
 
 ## Who created this app and why?
 
-It was created by [Chris Wilson](http://www.xaipete.net) to help people stay a bit safer online.
+It was created by [Chris Wilson](https://www.xaipete.net) to help people stay a bit safer online.
