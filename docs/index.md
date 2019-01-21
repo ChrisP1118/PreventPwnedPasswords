@@ -1,3 +1,5 @@
+__This plugin no longer works and is no longer actively developed.__
+
 # Prevent Pwned Passwords
 
 Prevent Pwned Passwords is a Chrome and Firefox extension that helps make sure you don't use any password that's known to have been part of a data breach.
